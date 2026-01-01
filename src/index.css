@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/500.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+/* COZICO Design System - Olive Green & White Premium Fashion */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Olive Green Theme */
+    --background: 40 20% 98%;
+    --foreground: 40 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 40 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 40 10% 10%;
+
+    /* Primary - Olive Green */
+    --primary: 82 18% 36%;
+    --primary-foreground: 40 20% 98%;
+
+    /* Secondary - Light Sage */
+    --secondary: 80 15% 92%;
+    --secondary-foreground: 82 18% 30%;
+
+    --muted: 40 10% 95%;
+    --muted-foreground: 40 10% 45%;
+
+    /* Accent - Deep Olive */
+    --accent: 82 25% 28%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 82 18% 36%;
+
+    --radius: 0.5rem;
+
+    /* Custom Brand Colors */
+    --olive: 82 18% 36%;
+    --olive-light: 80 15% 92%;
+    --olive-dark: 82 25% 28%;
+    --cream: 40 30% 96%;
+    --gold: 43 74% 49%;
+    --charcoal: 40 10% 15%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(82, 18%, 36%) 0%, hsl(82, 25%, 28%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(40, 20%, 98%) 0%, hsl(40, 30%, 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(40, 15%, 97%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(40 10% 10% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(40 10% 10% / 0.05), 0 2px 4px -2px hsl(40 10% 10% / 0.03);
+    --shadow-lg: 0 10px 15px -3px hsl(40 10% 10% / 0.08), 0 4px 6px -4px hsl(40 10% 10% / 0.03);
+    --shadow-xl: 0 20px 25px -5px hsl(40 10% 10% / 0.1), 0 8px 10px -6px hsl(40 10% 10% / 0.05);
+    --shadow-glow: 0 0 40px hsl(82 18% 36% / 0.15);
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 40 20% 98%;
+    --sidebar-foreground: 40 10% 10%;
+    --sidebar-primary: 82 18% 36%;
+    --sidebar-primary-foreground: 40 20% 98%;
+    --sidebar-accent: 80 15% 92%;
+    --sidebar-accent-foreground: 82 18% 30%;
+    --sidebar-border: 40 15% 88%;
+    --sidebar-ring: 82 18% 36%;
+  }
+
+  .dark {
+    --background: 40 10% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 40 10% 10%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 40 10% 10%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 82 25% 55%;
+    --primary-foreground: 40 10% 8%;
+
+    --secondary: 82 15% 18%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 40 10% 18%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 82 20% 22%;
+    --accent-foreground: 40 20% 95%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 18%;
+    --input: 40 10% 18%;
+    --ring: 82 25% 55%;
+
+    --olive: 82 25% 55%;
+    --olive-light: 82 15% 25%;
+    --olive-dark: 82 20% 45%;
+    --cream: 40 15% 12%;
+    --charcoal: 40 20% 90%;
+
+    --sidebar-background: 40 10% 8%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 82 25% 55%;
+    --sidebar-primary-foreground: 40 10% 8%;
+    --sidebar-accent: 82 15% 18%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 40 10% 18%;
+    --sidebar-ring: 82 25% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-olive to-olive-dark;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-olive-dark transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .product-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-semibold text-foreground tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg md:text-xl mt-4 max-w-2xl;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-primary/20 text-foreground;
+}
